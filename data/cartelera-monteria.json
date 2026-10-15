@@ -1,15 +1,15 @@
 {
   "ciudad": "Monteria",
-  "actualizado": "2026-10-15T16:29:16-05:00",
+  "actualizado": "2026-10-15T16:49:08-05:00",
   "fuentes": {
     "cinemark": {
       "ok": true,
-      "actualizado": "2026-10-15T16:29:16-05:00",
-      "funciones": 110
+      "actualizado": "2026-10-15T16:49:08-05:00",
+      "funciones": 109
     },
     "royal": {
       "ok": true,
-      "actualizado": "2026-10-15T16:29:16-05:00",
+      "actualizado": "2026-10-15T16:49:08-05:00",
       "funciones": 118
     },
     "cine_colombia": {
@@ -155,17 +155,6 @@
     }
   ],
   "funciones": [
-    {
-      "cine": "cm-buenavista",
-      "pelicula": "cm-HO00027786",
-      "fecha": "2026-10-15",
-      "hora": "15:45",
-      "formato": "2D",
-      "idioma": "doblada",
-      "sala": "Sala 4",
-      "precio": 17000,
-      "precio_origen": "calculado"
-    },
     {
       "cine": "cm-buenavista",
       "pelicula": "cm-HO00028594",
