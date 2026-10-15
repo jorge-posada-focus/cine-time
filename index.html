@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cine Time, estado de los datos</title>
+<style>
+  :root {
+    --fondo: #f6f7f8;
+    --texto: #16191d;
+    --suave: #5a626b;
+    --linea: #d9dde1;
+    --ok: #1d6b3a;
+    --falla: #a3261d;
+    --aviso: #8a5a00;
+    --enlace: #1f4fbf;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --fondo: #14171a;
+      --texto: #eceef0;
+      --suave: #9aa3ab;
+      --linea: #2c3237;
+      --ok: #5fc27f;
+      --falla: #f0857d;
+      --aviso: #e0b04f;
+      --enlace: #8fb0ff;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--fondo);
+    color: var(--texto);
+    font: 16px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  main { max-width: 46rem; margin: 0 auto; padding: 2.5rem 1rem 4rem; }
+  h1 { font-size: 1.6rem; line-height: 1.2; margin: 0 0 .4rem; }
+  p { margin: .5rem 0; }
+  .suave { color: var(--suave); }
+  .aviso { color: var(--aviso); font-weight: 600; }
+  table { width: 100%; border-collapse: collapse; margin: 1.5rem 0 .5rem; }
+  th, td { text-align: left; padding: .6rem .5rem; border-bottom: 1px solid var(--linea); vertical-align: top; }
+  th { font-size: .85rem; color: var(--suave); font-weight: 600; }
+  .ok { color: var(--ok); font-weight: 600; }
+  .falla { color: var(--falla); font-weight: 600; }
+  .pendiente { color: var(--suave); font-weight: 600; }
+  a { color: var(--enlace); }
+  a:focus-visible { outline: 2px solid var(--enlace); outline-offset: 2px; }
+  ::selection { background: var(--enlace); color: #fff; }
+  @media (max-width: 34rem) {
+    thead { display: none; }
+    tr { display: block; padding: .6rem 0; border-bottom: 1px solid var(--linea); }
+    td { display: block; border: 0; padding: .1rem 0; }
+    td::before { content: attr(data-campo) ": "; color: var(--suave); }
+  }
+</style>
+</head>
+<body>
+<main>
+  <h1>Cine Time, estado de los datos</h1>
+  <p id="resumen" class="suave">Cargando...</p>
+  <p id="alerta" class="aviso" hidden></p>
+
+  <table>
+    <thead>
+      <tr><th>Fuente</th><th>Estado</th><th>Funciones</th><th>Última lectura correcta</th></tr>
+    </thead>
+    <tbody id="fuentes"></tbody>
+  </table>
+
+  <p class="suave">Esta página es provisional: muestra si el robot está trayendo la cartelera. La app de recomendación va en su lugar y lee el mismo archivo.</p>
+  <p><a href="data/cartelera-monteria.json">data/cartelera-monteria.json</a></p>
+</main>
+
+<script>
+const NOMBRES = {
+  cinemark: "Cinemark Buenavista",
+  royal: "Royal Films Nuestro Montería",
+  cine_colombia: "Cine Colombia Alamedas"
+};
+const fecha = iso => new Date(iso).toLocaleString("es-CO", {
+  dateStyle: "long", timeStyle: "short", timeZone: "America/Bogota"
+});
+
+function celda(tr, campo, texto, clase) {
+  const td = document.createElement("td");
+  td.dataset.campo = campo;
+  td.textContent = texto;
+  if (clase) td.className = clase;
+  tr.appendChild(td);
+}
+
+fetch("data/cartelera-monteria.json", { cache: "no-store" })
+  .then(r => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
+  .then(d => {
+    const ciudad = d.ciudad === "Monteria" ? "Montería" : d.ciudad;
+    document.getElementById("resumen").textContent =
+      `Última actualización: ${fecha(d.actualizado)}, con ` +
+      `${d.peliculas.length} películas y ${d.funciones.length} funciones en ${ciudad}.`;
+
+    const horas = (Date.now() - new Date(d.actualizado)) / 36e5;
+    if (horas > 36) {
+      const a = document.getElementById("alerta");
+      a.textContent = `Los datos tienen ${Math.round(horas)} horas. El robot no se está ejecutando.`;
+      a.hidden = false;
+    }
+
+    const cuerpo = document.getElementById("fuentes");
+    for (const [id, f] of Object.entries(d.fuentes)) {
+      const tr = document.createElement("tr");
+      const pendiente = !f.ok && /^no implementada/.test(f.error || "");
+      celda(tr, "Fuente", NOMBRES[id] || id);
+      if (f.ok) celda(tr, "Estado", "al día", "ok");
+      else if (pendiente) celda(tr, "Estado", "pendiente", "pendiente");
+      else celda(tr, "Estado", "falló, se muestran datos anteriores", "falla");
+      celda(tr, "Funciones", String(f.funciones));
+      const ultima = f.ok ? f.actualizado : f.ultima_actualizacion_ok;
+      celda(tr, "Última lectura correcta", ultima ? fecha(ultima) : "nunca");
+      cuerpo.appendChild(tr);
+    }
+  })
+  .catch(e => {
+    document.getElementById("resumen").textContent = "No se pudo leer el archivo de la cartelera (" + e.message + ").";
+  });
+</script>
+</body>
+</html>
