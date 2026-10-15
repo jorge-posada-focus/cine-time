@@ -1,0 +1,27 @@
+{
+  "version": "2026-10-15",
+  "fuente": "Tarifas de referencia del informe de avance de Cine Time (2D localidad general, punto medio cuando la cadena publica un rango). Se revisan a mano cuando cambien; el robot solo las aplica.",
+  "festivos": [
+    "2026-11-02",
+    "2026-11-16",
+    "2026-12-08",
+    "2026-12-25"
+  ],
+  "supuestos": [
+    "Solo se calcula precio para funciones 2D en sala estándar. DBOX, XD, 3D y VIP quedan en null con precio_origen sin_dato.",
+    "El descuento de martes y miércoles no se aplica en festivos (Royal lo dice expresamente; para Cinemark se asume igual).",
+    "Los festivos son los de la ley Emiliani para 2026 posteriores a la fecha de corte; hay que completar 2027 antes de enero."
+  ],
+  "cadenas": {
+    "cinemark": {
+      "entre_semana": 17000,
+      "fin_de_semana_o_festivo": 17400,
+      "descuento_martes_miercoles": 0.5
+    },
+    "royal": {
+      "todos_los_dias": 13000,
+      "descuento_martes_miercoles": 0.5,
+      "recargo_web": 1500
+    }
+  }
+}

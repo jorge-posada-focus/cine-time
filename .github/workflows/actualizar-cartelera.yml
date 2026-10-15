@@ -1,0 +1,49 @@
+name: Actualizar cartelera
+
+on:
+  schedule:
+    - cron: "0 11 * * *"   # 11:00 UTC = 6:00 a. m. en Bogotá, todos los días
+  workflow_dispatch:        # también se puede lanzar a mano desde la pestaña Actions
+
+permissions:
+  contents: write           # el robot guarda el JSON en el repositorio
+
+concurrency:
+  group: actualizar-cartelera
+  cancel-in-progress: false
+
+jobs:
+  robot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      # Si una cadena falla el robot igual escribe el JSON (con los datos anteriores de esa cadena).
+      # Por eso este paso no corta el flujo: primero se guarda el archivo y al final se marca el fallo.
+      - name: Ejecutar robot
+        id: robot
+        continue-on-error: true
+        run: python robot/cartelera.py
+
+      - name: Guardar cartelera
+        run: |
+          git config user.name "cine-time-bot"
+          git config user.email "cine-time-bot@users.noreply.github.com"
+          git add data/cartelera-monteria.json
+          if git diff --cached --quiet; then
+            echo "Sin cambios en la cartelera."
+          else
+            git commit -m "Actualizar cartelera $(TZ=America/Bogota date +%F)"
+            git push
+          fi
+
+      - name: Marcar fallo de fuente
+        if: steps.robot.outcome == 'failure'
+        run: |
+          echo "Una de las fuentes falló. Revisa el paso 'Ejecutar robot'."
+          exit 1
