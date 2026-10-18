@@ -32,6 +32,7 @@ El programa no borra nada. Conserva las funciones anteriores de esa cadena (las 
 - `robot/tarifas.json`: tarifas y festivos.
 - `data/cartelera-monteria.json`: la cartelera del día.
 - `index.html`: página que muestra el estado de cada fuente. Publicada en https://jorge-posada-focus.github.io/cine-time/
+- `app/`: la app para el usuario. Lee `data/cartelera-monteria.json` y muestra funciones por día con duración, hora de término y precio, más la calculadora de entradas y combos. Publicada en https://jorge-posada-focus.github.io/cine-time/app/
 - `.github/workflows/actualizar-cartelera.yml`: la ejecución diaria.
 
 ## Correrlo en el computador

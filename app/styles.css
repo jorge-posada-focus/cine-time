@@ -1,0 +1,27 @@
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 70px)}
+body{background:#0a0a0c;color:#e5e7eb;font-family:Inter,Roboto,system-ui,sans-serif}
+.card{background:#141418;border:1px solid #23232b;border-radius:1rem;transition:transform .2s,border-color .2s}
+.card:hover{transform:translateY(-3px);border-color:#10b981}
+.release-card{display:flex;align-items:center;gap:1rem;min-height:10rem;border:1px solid #23232b;transition:transform .2s,border-color .2s}
+.release-card:hover{transform:translateY(-2px);border-color:#10b981}
+.release-poster{display:block;flex:none;width:6rem;height:9rem;object-fit:cover;border-radius:.5rem;background:#23232b}
+.movie-card{display:block}
+.movie-poster{display:flex;width:6rem;height:9rem;object-fit:cover;align-items:center;justify-content:center;border-radius:.5rem;background:linear-gradient(145deg,#064e3b,#18181b 65%);color:#a7f3d0;font-size:2rem}
+.movie-poster-fallback{flex-direction:column;gap:.5rem;padding:.5rem;text-align:center}
+.movie-poster-fallback span{font-size:.7rem;line-height:1.2;color:#d4d4d8}
+.movie-details{min-width:0}
+.selected-movie-card{display:grid;grid-template-columns:5rem minmax(0,1fr);gap:.75rem;align-items:start;width:100%;padding:.75rem;border:1px solid #2d2d36;border-radius:.75rem;background:#0a0a0c}
+.selected-movie-poster{display:block;width:5rem;height:7.5rem;object-fit:cover;border-radius:.5rem;background:linear-gradient(145deg,#064e3b,#18181b 65%)}
+.btn{transition:transform .15s,background .15s}.btn:active{transform:scale(.95)}
+.dia[aria-pressed="true"]{border-color:#10b981;box-shadow:0 0 0 2px #10b981}
+.time{background:#1d1d24;border:1px solid #2d2d36;border-radius:.5rem;padding:.2rem .6rem;font-size:.85rem}
+nav::-webkit-scrollbar{display:none}
+.fade{animation:f .4s ease}@keyframes f{from{opacity:0;transform:translateY(8px)}to{opacity:1}}
+.site-header{padding-top:env(safe-area-inset-top,0px)}
+input:focus-visible,select:focus-visible,button:focus-visible,a:focus-visible{outline:2px solid #34d399;outline-offset:2px}
+@media(max-width:640px){.site-header nav{gap:.25rem}.site-header nav a{padding-left:.6rem;padding-right:.6rem}}
+
+.func{background:#1d1d24;border:1px solid #2d2d36;border-radius:.5rem;padding:.35rem .6rem;font-size:.85rem;line-height:1.25}
+.func small{display:block;color:#a1a1aa;font-size:.7rem}
+.func-pasada{opacity:.45}
