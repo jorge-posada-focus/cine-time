@@ -6,7 +6,7 @@
 <title>Cine Time Montería</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="tailwind.css">
-<link rel="stylesheet" href="styles.css?v=7">
+<link rel="stylesheet" href="styles.css?v=8">
 </head>
 <body>
 <header class="site-header sticky top-0 z-50 bg-black/80 backdrop-blur border-b border-zinc-800">
@@ -28,8 +28,13 @@
 <section id="inicio" class="py-10">
   <h1 class="text-3xl md:text-5xl font-black leading-tight">¿Cuánto pagarías al cine?</h1>
   <p class="mt-3 text-zinc-300 text-lg">Elige día, hora y personas. Te decimos dónde sale más barato.</p>
-  <label class="block text-sm font-medium mt-6 max-w-sm">Ciudad
-    <select id="cCiudad" class="mt-1 w-full bg-zinc-900 border border-zinc-700 rounded-lg px-3 py-3 text-zinc-100">
+  <div class="city-box">
+    <div class="city-head">
+      <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+      <label for="cCiudad">Ciudad</label>
+      <span class="city-tag">Activa: Montería</span>
+    </div>
+    <select id="cCiudad" class="city-select">
       <option value="monteria" selected>Montería</option>
       <option disabled>Bogotá · Pronto</option>
       <option disabled>Medellín · Pronto</option>
@@ -44,8 +49,9 @@
       <option disabled>Villavicencio · Pronto</option>
       <option disabled>Pasto · Pronto</option>
       <option disabled>Manizales · Pronto</option>
-    </select></label>
-  <p class="mt-2 text-xs text-zinc-400">Por ahora solo hay datos de Montería. Las demás ciudades llegarán después.</p>
+    </select>
+    <p class="city-note">Por ahora solo hay datos de Montería. Las demás ciudades llegarán después.</p>
+  </div>
 </section>
 
 <section id="calculadora" class="py-6 scroll-mt-24">
