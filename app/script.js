@@ -79,7 +79,9 @@ $('#cBtn').onclick=()=>{
   <p class="mt-3 text-sm ${COL[a.n]}">Afluencia ${DIAS[dia].toLowerCase()}: ${a.n}</p>
   <h3 class="font-bold mt-5 mb-2">Total con entrada y combos</h3>
   <div class="space-y-2 text-sm">${combos.map(x=>`<div class="flex justify-between gap-3 border-t border-zinc-700 pt-2">
-   <span>${CINES[x.k]}${x.k===mejor.k?' <b class="text-emerald-300">· menor</b>':''}</span><b>${cop(x.min)}–${cop(x.max)}</b></div>`).join('')}</div>
+   <div><span>${CINES[x.k]}${x.k===mejor.k?' <b class="text-emerald-300">· menor</b>':''}</span>
+   <p class="text-xs text-zinc-400">${x.plan.items.map(i=>`${i.count} × ${i.combo.name}`).join(' + ')||'Sin combo'}</p></div>
+   <b>${cop(x.min)}–${cop(x.max)}</b></div>`).join('')}</div>
   <p class="text-xs text-zinc-400 mt-3">Combos de referencia. Confirma precios y porciones en la sede.</p></div>`;
 };
 
@@ -138,7 +140,7 @@ function armarPeliculas(d){
   if(!g.titulos.includes(p.titulo))g.titulos.push(p.titulo);
   g.dur=g.dur||p.duracion_min;
   g.imagen=g.imagen||p.imagen||null;
-  g.funciones.push(f);
+  g.funciones.push({...f,dur:p.duracion_min});
  });
  // La imagen se busca entre todos los títulos que coinciden: así la de Cinemark sirve también para Royal
  return [...grupos.values()].map(g=>({n:bonito(g.titulos.find(t=>t!==t.toUpperCase())||g.titulos[0]),dur:g.dur,funciones:g.funciones,imagen:g.imagen||null}))
@@ -148,9 +150,16 @@ function funcionesDe(p,k,dia){
  const lim=dia===hoyBogota()?ahoraBogota():'00:00';
  return p.funciones.filter(f=>CINE_A_CLAVE[f.cine]===k&&f.fecha===dia).sort((a,b)=>a.hora.localeCompare(b.hora)).map(f=>({...f,pasada:f.hora<lim}));
 }
+/* Hora estimada de salida: inicio + duración + 12 min de publicidad y avances */
+function horaSalida(h,min){
+ if(!min)return null;
+ const t=(+h.slice(0,2))*60+(+h.slice(3))+min+12, r=t%1440;
+ return hora12(`${Math.floor(r/60)}:${String(r%60).padStart(2,'0')}`);
+}
 function chipFuncion(f){
  const precio=f.precio?cop(f.precio).replace(' COP',''):'precio por confirmar';
- return `<span class="func ${f.pasada?'func-pasada':''}"><b>${hora12(f.hora)}</b><small>${precio}</small></span>`;
+ const salida=horaSalida(f.hora,f.dur);
+ return `<span class="func ${f.pasada?'func-pasada':''}"><b>${hora12(f.hora)}</b><small>${salida?'Sale ~'+salida:''}</small><small>${precio}</small></span>`;
 }
 function drawPel(){
  if(!DATOS)return;
