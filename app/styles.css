@@ -31,3 +31,14 @@ input:focus-visible,select:focus-visible,button:focus-visible,a:focus-visible{ou
 .poster-img { width: 6rem; flex-shrink: 0; border-radius: .5rem; object-fit: cover; aspect-ratio: 2 / 3; }
 .poster-info { min-width: 0; flex: 1; }
 @media (min-width: 768px) { .poster-img { width: 8rem; } }
+
+/* Celular: menú en dos filas, nada que se salga de la pantalla */
+@media (max-width: 640px) {
+  .site-header .max-w-6xl { flex-wrap: wrap; gap: .25rem .75rem; padding-top: .6rem; padding-bottom: .6rem; }
+  .site-header nav { width: 100%; margin-left: 0; flex-wrap: wrap; justify-content: center; }
+  .site-header nav a { padding: .35rem .55rem; font-size: .8rem; }
+  .grid > * { min-width: 0; }
+  .whitespace-nowrap { white-space: normal; }
+  h1 { font-size: 1.9rem; }
+  main { padding-left: 16px; padding-right: 16px; }
+}
