@@ -223,3 +223,8 @@ fetch(RUTA_DATOS).then(r=>{if(!r.ok)throw new Error(r.status);return r.json();})
  $('#estadoDatos').textContent='No se pudo cargar la cartelera. Sirve la carpeta con un servidor local (python -m http.server).';
  $('#peliculasLista').innerHTML='';
 });
+
+/* Menú de celular: tocar las tres rayas abre o cierra los enlaces */
+const menuBtn=$('#menuBtn'), menuNav=$('#menuNav');
+menuBtn.onclick=()=>{const abierto=menuNav.classList.toggle('abierto');menuBtn.setAttribute('aria-expanded',String(abierto));};
+menuNav.querySelectorAll('a').forEach(a=>a.onclick=()=>{menuNav.classList.remove('abierto');menuBtn.setAttribute('aria-expanded','false');});

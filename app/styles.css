@@ -55,3 +55,13 @@ select:focus { border-color: #34d399; }
 @media (min-width: 641px) {
   .site-header nav { flex-wrap: wrap; justify-content: flex-end; }
 }
+
+/* Botón de tres rayas: en celular el menú se despliega al tocarlo */
+.menu-btn { display: none; }
+@media (max-width: 640px) {
+  .menu-btn { display: flex; flex-direction: column; justify-content: center; gap: 4px; margin-left: auto; width: 2.6rem; height: 2.6rem; padding: .6rem; border: 1px solid #3f3f46; border-radius: .5rem; background: transparent; cursor: pointer; }
+  .menu-btn span { display: block; height: 2px; width: 100%; background: #f4f4f5; border-radius: 2px; }
+  .site-header nav { display: none; width: 100%; margin-left: 0; grid-template-columns: 1fr; gap: .3rem; padding-bottom: .25rem; }
+  .site-header nav.abierto { display: grid; }
+  .site-header nav a { padding: .6rem .8rem; font-size: .95rem; text-align: left; background: #18181b; border-radius: .5rem; }
+}

@@ -6,13 +6,14 @@
 <title>Cine Time Montería</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="tailwind.css">
-<link rel="stylesheet" href="styles.css?v=5">
+<link rel="stylesheet" href="styles.css?v=6">
 </head>
 <body>
 <header class="site-header sticky top-0 z-50 bg-black/80 backdrop-blur border-b border-zinc-800">
   <div class="max-w-6xl mx-auto px-4 py-3 flex items-center gap-4">
     <a href="#inicio" class="font-black text-lg">Cine <span class="text-emerald-400">Time</span></a>
-    <nav class="ml-auto flex gap-1 text-sm">
+    <button id="menuBtn" type="button" class="menu-btn" aria-label="Abrir menú" aria-expanded="false" aria-controls="menuNav"><span></span><span></span><span></span></button>
+    <nav id="menuNav" class="ml-auto flex gap-1 text-sm">
       <a class="px-3 py-2 rounded-lg hover:bg-zinc-800" href="#calculadora">Calcular</a>
       <a class="px-3 py-2 rounded-lg hover:bg-zinc-800" href="#peliculas">Películas</a>
       <a class="px-3 py-2 rounded-lg hover:bg-zinc-800" href="#estrenos">Estrenos</a>
@@ -115,6 +116,6 @@
   Precios y horarios aproximados. Confirma con cada cine.
 </footer>
 
-<script src="script.js?v=5"></script>
+<script src="script.js?v=6"></script>
 </body>
 </html>
