@@ -42,3 +42,9 @@ input:focus-visible,select:focus-visible,button:focus-visible,a:focus-visible{ou
   h1 { font-size: 1.9rem; }
   main { padding-left: 16px; padding-right: 16px; }
 }
+
+/* Desplegables con la paleta oscura de la página (el menú abierto también sale oscuro) */
+select { color-scheme: dark; background-color: #18181b; color: #f4f4f5; }
+select option { background-color: #18181b; color: #f4f4f5; }
+select option:disabled { color: #71717a; }
+select:focus { border-color: #34d399; }
