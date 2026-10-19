@@ -50,6 +50,21 @@ const DIAS=['Lunes','Martes','Miércoles','Jueves','Viernes','Sábado','Domingo'
 const AF=['baja','alta','alta','baja','media','alta','alta'].map(n=>({n}));
 const COL={baja:'text-emerald-300',media:'text-orange-300',alta:'text-red-300'};
 
+/* Hora estimada de salida de la película elegida, en la franja de hora que escogió el usuario */
+const FRANJA_RANGO={m:['00:00','14:59'],t:['15:00','19:59'],n:['20:00','23:59']};
+function horaSalidaPelicula(p,fr){
+ const [ini,fin]=FRANJA_RANGO[fr];
+ const filas=['cm','rf'].map(k=>{
+  const fs=funcionesDe(p,k,diaSel).filter(f=>f.hora>=ini&&f.hora<=fin);
+  const f=fs[0];
+  return `<div class="flex justify-between gap-3 border-t border-zinc-700 pt-2 text-sm"><span>${CINES[k]}</span>
+   <span>${f?`${hora12(f.hora)} · <b class="text-emerald-300">sale ~${horaSalida(f.hora,f.dur)||'?'}</b>`:'<span class="text-zinc-500">sin función en esta hora</span>'}</span></div>`;
+ }).join('');
+ return `<div class="mb-4"><p class="text-sm text-zinc-300">Hora estimada de salida · ${p.n}</p>
+  <div class="space-y-1 mt-2">${filas}</div>
+  <p class="text-xs text-zinc-400 mt-2">Incluye ${p.dur?p.dur+' min de película':'la duración'} y 12 min de publicidad.</p></div>`;
+}
+
 /* Calculadora: la hora es el único dato de horario, el precio sale de ella */
 $('#cDia').innerHTML=DIAS.map((d,i)=>`<option value="${i}">${d}</option>`).join('');
 function precio(k,dia,fr){
@@ -72,6 +87,7 @@ $('#cBtn').onclick=()=>{
  const mejor=[...combos].sort((x,y)=>x.estimate-y.estimate)[0];
  const barato=[...r].sort((a,b)=>a.tot-b.tot)[0],a=AF[dia];
  $('#cOut').innerHTML=`<div class="w-full text-left fade">
+  ${peliculaSeleccionada?horaSalidaPelicula(peliculaSeleccionada,fr):''}
   <p class="text-sm text-zinc-300">Te recomendamos</p>
   <p class="text-2xl font-black text-emerald-300">${CINES[barato.k]} · ${SEDE[barato.k]}</p>
   <p class="text-3xl font-black mt-2">${cop(barato.tot)}</p>
@@ -119,7 +135,7 @@ showDia(0);
 /* Cartelera: sale de data/cartelera-monteria.json, que actualiza el robot cada día */
 const RUTA_DATOS='../data/cartelera-monteria.json';
 const CINE_A_CLAVE={'cm-buenavista':'cm','rf-nuestro-monteria':'rf'};
-let DATOS=null,PEL=[],sel='Todas',diaSel=null;
+let DATOS=null,PEL=[],sel='Todas',diaSel=null,peliculaSeleccionada=null;
 const filtroPelicula=$('#filtroPelicula'),filtroDia=$('#filtroDia');
 
 const clave=t=>t.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'').replace(/[^a-z0-9 ]/g,' ').replace(/\s+/g,' ').trim().replace(/^(el|la|los|las) /,'');
@@ -174,8 +190,12 @@ function drawPel(){
   <button type="button" class="btn mt-4 w-full bg-emerald-500 hover:bg-emerald-400 text-black font-bold py-2.5 rounded-lg" data-elegir="${PEL.indexOf(p)}">Calcular para esta película</button></div></article>`).join(''):'<p class="text-zinc-400">No hay funciones para ese día.</p>';
  document.querySelectorAll('#peliculasLista [data-elegir]').forEach(b=>b.onclick=()=>{
   const p=PEL[+b.dataset.elegir];
+  peliculaSeleccionada=p;
   filtroPelicula.value=p.n;sel=p.n;drawPel();
   $('#calculadora').scrollIntoView({behavior:'smooth',block:'start'});
+  $('#cOut').innerHTML=`<div class="w-full text-left fade"><p class="text-sm text-zinc-300">Película elegida</p>
+   <p class="text-xl font-black text-amber-300">${p.n}</p>
+   <p class="text-sm text-zinc-300 mt-2">Elige personas y hora, y pulsa <b>Calcular</b> para ver la hora estimada de salida.</p></div>`;
  });
 }
 function llenarPeliculas(){
