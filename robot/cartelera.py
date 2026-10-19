@@ -133,6 +133,8 @@ def leer_cinemark(tarifas):
                     "titulo": titulo,
                     "duracion_min": int(peli["RunTime"]) if str(peli.get("RunTime", "")).isdigit() else None,
                     "clasificacion": peli.get("Rating") or None,
+                    # Portada pública de Cinemark (JPEG, sin firma). Royal no la publica: ver leer_royal
+                    "imagen": peli.get("CoverImageUrl") or None,
                 }
                 funciones.append({
                     "cine": "cm-buenavista", "pelicula": pid,
@@ -175,6 +177,9 @@ def leer_royal(tarifas):
                 "titulo": (p.get("pelicula_titulo") or p["pelicula_nombre_formato"]).strip(),
                 "duracion_min": p.get("duracion") or None,
                 "clasificacion": (p.get("clasificacion") or {}).get("clasificacion_nombre"),
+                # Royal guarda el póster en S3 privado: su web lo pide con URL firmada (API con sesión).
+                # Por eso no se publica aquí; la app usa la imagen de Cinemark de la misma película.
+                "imagen": None,
             }
             funciones.append({
                 "cine": "rf-nuestro-monteria", "pelicula": pid,

@@ -1,16 +1,16 @@
 {
   "ciudad": "Monteria",
-  "actualizado": "2026-10-19T12:14:50-05:00",
+  "actualizado": "2026-10-19T16:24:03-05:00",
   "fuentes": {
     "cinemark": {
       "ok": true,
-      "actualizado": "2026-10-19T12:14:50-05:00",
-      "funciones": 62
+      "actualizado": "2026-10-19T16:24:03-05:00",
+      "funciones": 58
     },
     "royal": {
       "ok": true,
-      "actualizado": "2026-10-19T12:14:50-05:00",
-      "funciones": 49
+      "actualizado": "2026-10-19T16:24:03-05:00",
+      "funciones": 44
     },
     "cine_colombia": {
       "ok": false,
@@ -37,209 +37,179 @@
       "id": "rf-4143",
       "titulo": "AVENGERS ENDGAME BONUS",
       "duracion_min": 185,
-      "clasificacion": "Para mayores de 12 años"
+      "clasificacion": "Para mayores de 12 años",
+      "imagen": null
     },
     {
       "id": "cm-HO00028714",
       "titulo": "BTS TOUR ARGENTINA",
       "duracion_min": 195,
-      "clasificacion": "TBC"
+      "clasificacion": "12-A",
+      "imagen": "https://assets.cinemark-core.com/5db771be04daec00076df3f5/vista/movies/6aa478b11fab73291fbddd83/common/bts-tour-argentina-112737-1789165209137"
     },
     {
       "id": "cm-HO00028715",
       "titulo": "BTS TOUR BRASIL",
       "duracion_min": 195,
-      "clasificacion": "TBC"
+      "clasificacion": "12-A",
+      "imagen": "https://assets.cinemark-core.com/5db771be04daec00076df3f5/vista/movies/6aa47fc093762635adbfb29d/common/bts-tour-brasil-112738-1789256231322"
     },
     {
       "id": "cm-HO00029030",
       "titulo": "Carrie",
       "duracion_min": 100,
-      "clasificacion": "TBC"
+      "clasificacion": "TBC",
+      "imagen": "https://assets.cinemark-core.com/5db771be04daec00076df3f5/vista/movies/6ab6b1f33f4cd92caf4332c8/common/carrie-112909-1792428965834"
     },
     {
       "id": "cm-HO00027967",
       "titulo": "CAÍDA DE LA BALLENA",
       "duracion_min": 105,
-      "clasificacion": "12-A"
+      "clasificacion": "12-A",
+      "imagen": "https://assets.cinemark-core.com/5db771be04daec00076df3f5/vista/movies/6ac675e24ff762acf6d323b3/common/caida-de-la-ballena-113566-1791415448794"
     },
     {
       "id": "cm-HO00027786",
       "titulo": "Coyote vs Acme",
       "duracion_min": 105,
-      "clasificacion": "7-A"
+      "clasificacion": "7-A",
+      "imagen": "https://assets.cinemark-core.com/5db771be04daec00076df3f5/vista/movies/6a512056eed0ba03426bc531/common/coyote-vs-acme-110786-1784060218688"
     },
     {
       "id": "cm-HO00029007",
       "titulo": "Drácula TS4",
       "duracion_min": 130,
-      "clasificacion": "15-A"
+      "clasificacion": "15-A",
+      "imagen": "https://assets.cinemark-core.com/5db771be04daec00076df3f5/vista/movies/6ab60226ac1bada1b0e31fe1/common/dracula-ts4-112908-1792428834757"
     },
     {
       "id": "rf-4015",
       "titulo": "EL CLÁSICO: BARCELONA VS REAL MADRID",
       "duracion_min": 120,
-      "clasificacion": "Pendiente"
+      "clasificacion": "Pendiente",
+      "imagen": null
     },
     {
       "id": "cm-HO00028594",
       "titulo": "El Corazon de la Bestia",
       "duracion_min": 100,
-      "clasificacion": "12-A"
+      "clasificacion": "12-A",
+      "imagen": "https://assets.cinemark-core.com/5db771be04daec00076df3f5/vista/movies/6a9595bf0e75d9870e67b412/common/el-corazon-de-la-bestia-112683-1788203374252"
     },
     {
       "id": "rf-4078",
       "titulo": "EL CORAZÓN DE LA BESTIA",
       "duracion_min": 101,
-      "clasificacion": "Para mayores de 12 años"
+      "clasificacion": "Para mayores de 12 años",
+      "imagen": null
     },
     {
       "id": "cm-HO00029018",
       "titulo": "El Exorcista TS4",
       "duracion_min": 135,
-      "clasificacion": "12-A"
+      "clasificacion": "12-A",
+      "imagen": "https://assets.cinemark-core.com/5db771be04daec00076df3f5/vista/movies/6ab60cb19b1be93aa6d20236/common/el-exorcista-ts4-112910-1792428857600"
     },
     {
       "id": "cm-HO00028974",
       "titulo": "Jóvenes y Brujas TS4",
       "duracion_min": 100,
-      "clasificacion": "TBC"
+      "clasificacion": "12-A",
+      "imagen": "https://assets.cinemark-core.com/5db771be04daec00076df3f5/vista/movies/6ab5fb1abba77de1ab8d4f9a/common/jovenes-y-brujas-ts4-112905-1792428785878"
     },
     {
       "id": "rf-4114",
       "titulo": "LA CAÍDA DE LA BALLENA",
       "duracion_min": 106,
-      "clasificacion": "Para mayores de 12 años"
+      "clasificacion": "Para mayores de 12 años",
+      "imagen": null
     },
     {
       "id": "rf-4008",
       "titulo": "LA ISLA OLVIDADA",
       "duracion_min": 98,
-      "clasificacion": "Para todo público"
+      "clasificacion": "Para todo público",
+      "imagen": null
     },
     {
       "id": "cm-HO00028963",
       "titulo": "Los Pájaros TS4",
       "duracion_min": 120,
-      "clasificacion": "12-A"
+      "clasificacion": "12-A",
+      "imagen": "https://assets.cinemark-core.com/5db771be04daec00076df3f5/vista/movies/6ab5fb1abba77de1ab8d4fa0/common/los-pajaros-ts4-112904-1792428773325"
     },
     {
       "id": "cm-HO00027963",
       "titulo": "MADRE SINIESTRA",
       "duracion_min": 95,
-      "clasificacion": "15-A"
+      "clasificacion": "15-A",
+      "imagen": "https://assets.cinemark-core.com/5db771be04daec00076df3f5/vista/movies/6aa1c0a66ec86f08f0fe7354/common/madre-siniestra-112853-1791322578607"
     },
     {
       "id": "rf-4121",
       "titulo": "MADRE SINIESTRA",
       "duracion_min": 100,
-      "clasificacion": "Para mayores de 15 años"
+      "clasificacion": "Para mayores de 15 años",
+      "imagen": null
     },
     {
       "id": "cm-HO00028996",
       "titulo": "Poltergeist TS4",
       "duracion_min": 115,
-      "clasificacion": "TBC"
+      "clasificacion": "12-A",
+      "imagen": "https://assets.cinemark-core.com/5db771be04daec00076df3f5/vista/movies/6ab60226ac1bada1b0e31ff2/common/poltergeist-ts4-112907-1792428821268"
     },
     {
       "id": "cm-HO00028955",
       "titulo": "Street Fighter",
       "duracion_min": 120,
-      "clasificacion": "12-A"
+      "clasificacion": "12-A",
+      "imagen": "https://assets.cinemark-core.com/5db771be04daec00076df3f5/vista/movies/6ab44e37e4d1ff0a6de63a5f/common/street-fighter-112903-1790605307780"
     },
     {
       "id": "rf-4009",
       "titulo": "STREET FIGHTER",
       "duracion_min": 119,
-      "clasificacion": "Para mayores de 12 años"
+      "clasificacion": "Para mayores de 12 años",
+      "imagen": null
     },
     {
       "id": "rf-4122",
       "titulo": "TADEO EL EXPLORADOR Y LA LAMPARA MARAVILLOSA",
       "duracion_min": 90,
-      "clasificacion": "Para todo público"
+      "clasificacion": "Para todo público",
+      "imagen": null
     },
     {
       "id": "cm-HO00027965",
       "titulo": "TADEO JONES 4",
       "duracion_min": 95,
-      "clasificacion": "Todos"
+      "clasificacion": "Todos",
+      "imagen": "https://assets.cinemark-core.com/5db771be04daec00076df3f5/vista/movies/6ab44e37e4d1ff0a6de63a53/common/tadeo-jones-4-111106-1790605337168"
     },
     {
       "id": "cm-HO00028618",
       "titulo": "VERITY",
       "duracion_min": 120,
-      "clasificacion": "15-A"
+      "clasificacion": "15-A",
+      "imagen": "https://assets.cinemark-core.com/5db771be04daec00076df3f5/vista/movies/6aa1dcb18c1145ee764a4255/common/verity-111111-1790775055108"
     },
     {
       "id": "rf-4120",
       "titulo": "VÉRTIGO 2: PUNTO MUERTO",
       "duracion_min": 98,
-      "clasificacion": "Para mayores de 12 años"
+      "clasificacion": "Para mayores de 12 años",
+      "imagen": null
     },
     {
       "id": "cm-HO00028985",
       "titulo": "¡Huye! TS4",
       "duracion_min": 105,
-      "clasificacion": "12-A"
+      "clasificacion": "12-A",
+      "imagen": "https://assets.cinemark-core.com/5db771be04daec00076df3f5/vista/movies/6ab5fb1abba77de1ab8d4f92/common/huye-ts4-112906-1792428804249"
     }
   ],
   "funciones": [
-    {
-      "cine": "cm-buenavista",
-      "pelicula": "cm-HO00028594",
-      "fecha": "2026-10-19",
-      "hora": "14:30",
-      "formato": "DBOX",
-      "idioma": "doblada",
-      "sala": "Sala 2",
-      "precio": null,
-      "precio_origen": "sin_dato"
-    },
-    {
-      "cine": "cm-buenavista",
-      "pelicula": "cm-HO00027965",
-      "fecha": "2026-10-19",
-      "hora": "14:40",
-      "formato": "2D",
-      "idioma": "doblada",
-      "sala": "Sala 5",
-      "precio": 17000,
-      "precio_origen": "calculado"
-    },
-    {
-      "cine": "cm-buenavista",
-      "pelicula": "cm-HO00028955",
-      "fecha": "2026-10-19",
-      "hora": "14:55",
-      "formato": "XD DBOX",
-      "idioma": "doblada",
-      "sala": "Sala 1",
-      "precio": null,
-      "precio_origen": "sin_dato"
-    },
-    {
-      "cine": "rf-nuestro-monteria",
-      "pelicula": "rf-4008",
-      "fecha": "2026-10-19",
-      "hora": "15:00",
-      "formato": "2D",
-      "idioma": "doblada",
-      "sala": "SALA 4 STD",
-      "precio": 13000,
-      "precio_origen": "calculado"
-    },
-    {
-      "cine": "cm-buenavista",
-      "pelicula": "cm-HO00027967",
-      "fecha": "2026-10-19",
-      "hora": "15:20",
-      "formato": "2D",
-      "idioma": "doblada",
-      "sala": "Sala 3",
-      "precio": 17000,
-      "precio_origen": "calculado"
-    },
     {
       "cine": "cm-buenavista",
       "pelicula": "cm-HO00027786",
@@ -249,50 +219,6 @@
       "idioma": "doblada",
       "sala": "Sala 4",
       "precio": 17000,
-      "precio_origen": "calculado"
-    },
-    {
-      "cine": "rf-nuestro-monteria",
-      "pelicula": "rf-4009",
-      "fecha": "2026-10-19",
-      "hora": "15:50",
-      "formato": "2D",
-      "idioma": "doblada",
-      "sala": "SALA 5 STD",
-      "precio": 13000,
-      "precio_origen": "calculado"
-    },
-    {
-      "cine": "rf-nuestro-monteria",
-      "pelicula": "rf-4122",
-      "fecha": "2026-10-19",
-      "hora": "16:00",
-      "formato": "2D",
-      "idioma": "doblada",
-      "sala": "SALA 1 STD",
-      "precio": 13000,
-      "precio_origen": "calculado"
-    },
-    {
-      "cine": "rf-nuestro-monteria",
-      "pelicula": "rf-4078",
-      "fecha": "2026-10-19",
-      "hora": "16:10",
-      "formato": "2D",
-      "idioma": "doblada",
-      "sala": "SALA 3 STD",
-      "precio": 13000,
-      "precio_origen": "calculado"
-    },
-    {
-      "cine": "rf-nuestro-monteria",
-      "pelicula": "rf-4114",
-      "fecha": "2026-10-19",
-      "hora": "16:20",
-      "formato": "2D",
-      "idioma": "doblada",
-      "sala": "SALA 2 STD",
-      "precio": 13000,
       "precio_origen": "calculado"
     },
     {
