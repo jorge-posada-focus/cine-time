@@ -27,8 +27,8 @@ input:focus-visible,select:focus-visible,button:focus-visible,a:focus-visible{ou
 .func-pasada{opacity:.45}
 
 /* Tarjeta de película con póster (estas utilidades no están en tailwind.css compilado) */
-.poster-card { display: flex; gap: 1rem; }
-.poster-img { width: 6rem; flex-shrink: 0; border-radius: .5rem; object-fit: cover; aspect-ratio: 2 / 3; }
+.poster-card { display: flex; gap: 1rem; align-items: flex-start; }
+.poster-img { width: 6rem; height: auto; flex-shrink: 0; align-self: flex-start; border-radius: .5rem; object-fit: cover; aspect-ratio: 2 / 3; }
 .poster-info { min-width: 0; flex: 1; }
 @media (min-width: 768px) { .poster-img { width: 8rem; } }
 
