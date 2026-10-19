@@ -116,7 +116,7 @@ $('#tarifas').innerHTML=tarifas.map(t=>`<div class="card p-5 ${t.best?'ring-1 ri
 $('#listaCombos').innerHTML=Object.keys(COMBOS).map(k=>`<article class="card p-5">
  <h3 class="font-black text-lg text-emerald-300">${CINES[k]}</h3><p class="text-sm text-zinc-400">${SEDE[k]}</p>
  <ul class="mt-4 space-y-3">${COMBOS[k].map(combo=>`<li class="rounded-lg bg-zinc-900 p-3">
-  <div class="flex justify-between items-start gap-3"><b>${combo.name}</b><b class="text-amber-300 text-right whitespace-nowrap">${combo.min===combo.max?cop(combo.min):`${cop(combo.min)}–${cop(combo.max)}`}</b></div>
+  <div class="flex justify-between items-start gap-3"><b>${combo.name}</b><b class="text-amber-300 text-right">${combo.min===combo.max?cop(combo.min):`${cop(combo.min)}–${cop(combo.max)}`}</b></div>
   <p class="text-sm text-zinc-300 mt-1">${combo.items}</p></li>`).join('')}</ul></article>`).join('');
 
 /* Afluencia por día: al tocar un día se muestra su detalle */
