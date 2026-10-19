@@ -83,6 +83,37 @@ $('#cBtn').onclick=()=>{
   <p class="text-xs text-zinc-400 mt-3">Combos de referencia. Confirma precios y porciones en la sede.</p></div>`;
 };
 
+/* Precios de referencia por cine */
+const tarifas=[
+ {id:'cc',base:'~$15.000 – $17.000',rows:[['Franja pico (3:00–7:59 p. m.)','$18.800'],['Nocturna (desde 8:00 p. m.)','$16.400']]},
+ {id:'cm',base:'~$16.000 – $18.000',rows:[['Fin de semana o festivo (2D)','$17.400']]},
+ {id:'rf',base:'~$13.000 – $15.000',rows:[['Entrada base más barata','$11.000 – $15.000'],['Recargo digital web','+$1.500 por boleta']],best:true}];
+$('#tarifas').innerHTML=tarifas.map(t=>`<div class="card p-5 ${t.best?'ring-1 ring-amber-400/60':''}">
+ ${t.best?'<span class="text-xs bg-amber-400 text-black font-bold px-2 py-0.5 rounded-full">Precio base más bajo</span>':''}
+ <h3 class="font-black text-lg mt-2">${CINES[t.id]}</h3><p class="text-xs text-zinc-400">${SEDE[t.id]}</p>
+ <p class="mt-3 text-2xl font-black text-emerald-400">${t.base} <span class="text-xs text-zinc-400">COP</span></p>
+ <ul class="mt-3 space-y-2 text-sm">${t.rows.map(r=>`<li class="flex justify-between gap-3 border-t border-zinc-800 pt-2"><span class="text-zinc-400">${r[0]}</span><b class="text-amber-300 text-right">${r[1]}</b></li>`).join('')}</ul></div>`).join('');
+
+/* Combos de referencia por cine */
+$('#listaCombos').innerHTML=Object.keys(COMBOS).map(k=>`<article class="card p-5">
+ <h3 class="font-black text-lg text-emerald-300">${CINES[k]}</h3><p class="text-sm text-zinc-400">${SEDE[k]}</p>
+ <ul class="mt-4 space-y-3">${COMBOS[k].map(combo=>`<li class="rounded-lg bg-zinc-900 p-3">
+  <div class="flex justify-between items-start gap-3"><b>${combo.name}</b><b class="text-amber-300 text-right whitespace-nowrap">${combo.min===combo.max?cop(combo.min):`${cop(combo.min)}–${cop(combo.max)}`}</b></div>
+  <p class="text-sm text-zinc-300 mt-1">${combo.items}</p></li>`).join('')}</ul></article>`).join('');
+
+/* Afluencia por día: al tocar un día se muestra su detalle */
+const AFTXT={baja:'Baja afluencia: salas despejadas.',media:'Afluencia media-alta: la noche se llena.',alta:'Alta afluencia: salas llenas y filas largas.'};
+const COLT={baja:'text-emerald-300',media:'text-orange-300',alta:'text-red-300'};
+const DIA_NOTA=['Retorno a la rutina. Mejor entre 2:00 y 4:30 p. m.','Día de promoción: espera filas.','Día de promoción: espera filas.','Víspera de estrenos. Mejor entre 2:00 y 4:30 p. m.','Arranca el fin de semana.','Fin de semana: reserva con anticipación.','Fin de semana: reserva con anticipación.'];
+function showDia(i){
+ const a=AF[i];
+ $('#diaInfo').innerHTML=`<b class="text-lg">${DIAS[i]}</b><p class="mt-2 font-semibold ${COLT[a.n]}">${AFTXT[a.n]}</p><p class="text-sm text-zinc-400 mt-1">${DIA_NOTA[i]}</p>`;
+ document.querySelectorAll('.dia').forEach(b=>b.setAttribute('aria-pressed',String(+b.dataset.i===i)));
+}
+$('#dias').innerHTML=DIAS.map((d,i)=>`<button type="button" data-i="${i}" aria-pressed="false" class="dia card py-3 text-center"><div class="text-xs md:text-sm font-bold">${d}</div><div class="h-2 w-2/3 mx-auto mt-2 rounded-full ${AF[i].n==='baja'?'bg-emerald-500':AF[i].n==='media'?'bg-orange-500':'bg-red-500'}"></div></button>`).join('');
+document.querySelectorAll('.dia').forEach(b=>b.onclick=()=>showDia(+b.dataset.i));
+showDia(0);
+
 /* Cartelera: sale de data/cartelera-monteria.json, que actualiza el robot cada día */
 const RUTA_DATOS='../data/cartelera-monteria.json';
 const CINE_A_CLAVE={'cm-buenavista':'cm','rf-nuestro-monteria':'rf'};

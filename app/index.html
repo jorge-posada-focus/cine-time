@@ -15,6 +15,10 @@
     <nav class="ml-auto flex gap-1 text-sm">
       <a class="px-3 py-2 rounded-lg hover:bg-zinc-800" href="#calculadora">Calcular</a>
       <a class="px-3 py-2 rounded-lg hover:bg-zinc-800" href="#peliculas">Películas</a>
+      <a class="px-3 py-2 rounded-lg hover:bg-zinc-800" href="#estrenos">Estrenos</a>
+      <a class="px-3 py-2 rounded-lg hover:bg-zinc-800" href="#precios">Precios</a>
+      <a class="px-3 py-2 rounded-lg hover:bg-zinc-800" href="#combos">Combos</a>
+      <a class="px-3 py-2 rounded-lg hover:bg-zinc-800" href="#aforo">Días</a>
     </nav>
   </div>
 </header>
@@ -55,6 +59,37 @@
   </div>
   <p id="estadoDatos" class="text-xs text-zinc-400 mb-4" aria-live="polite"></p>
   <div class="grid gap-4" id="peliculasLista"></div>
+</section>
+
+<section id="estrenos" class="py-6 scroll-mt-24">
+  <h2 class="text-2xl font-black">Próximos estrenos</h2>
+  <p class="text-sm text-zinc-400 mt-1 mb-4">Anunciados en Colombia.com. Las fechas pueden cambiar; no confirman la programación de Montería.</p>
+  <div class="grid sm:grid-cols-2 gap-3">
+    <article class="card p-4 flex gap-4"><img src="https://cdn.colombia.com/cine/2026/10/clayface-47962.jpg" alt="Póster de Clayface" width="96" height="144" loading="lazy" class="poster-img"><div><h3 class="font-bold text-amber-300">Clayface</h3><p class="text-sm text-zinc-400 mt-1">Terror y ciencia ficción. Fecha por confirmar.</p></div></article>
+    <article class="card p-4 flex gap-4"><img src="https://cdn.colombia.com/cine/2026/10/la-sinfonia-de-los-bichos-raros-47964.jpg" alt="Póster de La Sinfonía de los Bichos Raros" width="96" height="144" loading="lazy" class="poster-img"><div><h3 class="font-bold text-amber-300">La Sinfonía de los Bichos Raros</h3><p class="text-sm text-zinc-400 mt-1">Animación. Fecha por confirmar.</p></div></article>
+    <article class="card p-4 flex gap-4"><img src="https://cdn.colombia.com/cine/2026/10/el-despertar-47965.jpg" alt="Póster de El Despertar" width="96" height="144" loading="lazy" class="poster-img"><div><h3 class="font-bold text-amber-300">El Despertar</h3><p class="text-sm text-zinc-400 mt-1">Suspenso. Fecha por confirmar.</p></div></article>
+    <article class="card p-4 flex gap-4"><img src="https://cdn.colombia.com/cine/2026/10/entrega-al-limite-47929.jpg" alt="Póster de Entrega al Límite" width="96" height="144" loading="lazy" class="poster-img"><div><h3 class="font-bold text-amber-300">Entrega al Límite</h3><p class="text-sm text-zinc-400 mt-1">Acción. Fecha por confirmar.</p></div></article>
+  </div>
+</section>
+
+<section id="precios" class="py-6 scroll-mt-24">
+  <h2 class="text-2xl font-black">Precios aproximados</h2>
+  <p class="text-sm text-zinc-400 mt-1 mb-4">Entrada regular en 2D, en pesos colombianos.</p>
+  <div class="grid md:grid-cols-3 gap-4" id="tarifas"></div>
+</section>
+
+<section id="combos" class="py-6 scroll-mt-24">
+  <h2 class="text-2xl font-black">Combos por cine</h2>
+  <p class="text-sm text-zinc-400 mt-1 mb-4">Precios de referencia. Cine Colombia y Royal son estimados.</p>
+  <div class="grid md:grid-cols-3 gap-4" id="listaCombos"></div>
+</section>
+
+<section id="aforo" class="py-6 pb-16 scroll-mt-24">
+  <h2 class="text-2xl font-black">¿Qué día hay menos gente?</h2>
+  <p class="text-sm text-zinc-400 mt-1 mb-4">Afluencia estimada por día. Toca un día para verlo.</p>
+  <div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-7 gap-2" id="dias"></div>
+  <div id="diaInfo" class="card mt-4 p-5" aria-live="polite"></div>
+  <p class="mt-5 text-sm text-zinc-300 rounded-xl border border-amber-400/40 bg-amber-400/10 p-4">Lunes a jueves, antes de las 3:00 p. m., la entrada matiné sale en $7.000 COP aprox.</p>
 </section>
 </main>
 
