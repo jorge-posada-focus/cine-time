@@ -10,134 +10,56 @@
 </head>
 <body>
 <header class="site-header sticky top-0 z-50 bg-black/80 backdrop-blur border-b border-zinc-800">
-  <div class="max-w-6xl mx-auto px-4 py-3 flex items-center gap-4 flex-wrap">
-    <a href="#inicio" class="font-black text-lg flex items-center gap-2"><span>Cine <span class="text-emerald-400">Time</span> Montería</span></a>
-    <nav class="flex flex-wrap gap-1 w-full md:w-auto md:ml-auto text-sm">
-      <a class="px-3 py-2 rounded-lg hover:bg-zinc-800" href="#calculadora">Calcular precio</a>
-      <a class="px-3 py-2 rounded-lg hover:bg-zinc-800" href="#cartelera">Películas</a>
-      <button id="abrirEstrenos" type="button" aria-expanded="false" class="px-3 py-2 rounded-lg hover:bg-zinc-800 text-left">Próximos estrenos</button>
-      <a class="px-3 py-2 rounded-lg hover:bg-zinc-800" href="#precios">Precios</a>
-      <a class="px-3 py-2 rounded-lg hover:bg-zinc-800" href="#combos">Combos</a>
-      <a class="px-3 py-2 rounded-lg hover:bg-zinc-800" href="#aforo">Días tranquilos</a>
+  <div class="max-w-6xl mx-auto px-4 py-3 flex items-center gap-4">
+    <a href="#inicio" class="font-black text-lg">Cine <span class="text-emerald-400">Time</span> Montería</a>
+    <nav class="ml-auto flex gap-1 text-sm">
+      <a class="px-3 py-2 rounded-lg hover:bg-zinc-800" href="#calculadora">Calcular</a>
+      <a class="px-3 py-2 rounded-lg hover:bg-zinc-800" href="#peliculas">Películas</a>
     </nav>
   </div>
 </header>
 
 <main class="max-w-6xl mx-auto px-4">
-<section id="inicio" class="py-10 md:py-14">
-  <p class="text-sm font-semibold text-emerald-300">Montería, Córdoba</p>
-  <h1 class="mt-2 text-3xl md:text-5xl font-black leading-tight">Planea tu próxima ida al cine</h1>
-  <p class="mt-3 text-zinc-300 text-lg max-w-2xl">Calcula el precio, mira los horarios y elige el cine que más te conviene.</p>
-  <p class="mt-3 text-sm text-zinc-400">Precios y horarios aproximados: confirma la información con cada cine.</p>
+<section id="inicio" class="py-10">
+  <h1 class="text-3xl md:text-5xl font-black leading-tight">¿Cuánto pagarías al cine?</h1>
+  <p class="mt-3 text-zinc-300 text-lg">Elige día, hora y personas. Te decimos dónde sale más barato.</p>
 </section>
 
-<section id="calculadora" class="py-8 scroll-mt-24">
-  <div class="mb-5">
-    <p class="text-sm font-bold text-emerald-300">1 · Calcula el precio</p>
-    <h2 class="text-2xl md:text-3xl font-black mt-1">¿Cuánto pagarían?</h2>
-    <p class="text-zinc-300 mt-2">Elige el día, la hora y cuántas personas van. Comparamos entradas y combos para recomendarte una opción económica.</p>
-  </div>
+<section id="calculadora" class="py-6 scroll-mt-24">
   <div class="card p-5 md:p-7 grid md:grid-cols-2 gap-6">
     <div class="space-y-4">
-      <label class="block text-sm font-medium">¿Cuántas personas van?
+      <label class="block text-sm font-medium">Personas
         <input id="cPers" type="number" min="1" max="20" value="2" required class="mt-1 w-full bg-zinc-900 border border-zinc-700 rounded-lg px-3 py-3"></label>
-      <label class="block text-sm font-medium">¿Qué día quieren ir?
+      <label class="block text-sm font-medium">Día
         <select id="cDia" class="mt-1 w-full bg-zinc-900 border border-zinc-700 rounded-lg px-3 py-3"></select></label>
-      <label class="block text-sm font-medium">¿A qué hora?
+      <label class="block text-sm font-medium">Hora de la función
         <select id="cFranja" class="mt-1 w-full bg-zinc-900 border border-zinc-700 rounded-lg px-3 py-3">
           <option value="m">Antes de las 3:00 p. m.</option>
-          <option value="t">De 3:00 a 7:59 p. m.</option>
+          <option value="t">3:00 a 7:59 p. m.</option>
           <option value="n">Desde las 8:00 p. m.</option></select></label>
-      <label class="block text-sm font-medium">¿Qué prefieren?
-        <select id="cPrio" class="mt-1 w-full bg-zinc-900 border border-zinc-700 rounded-lg px-3 py-3">
-          <option value="ahorro">Pagar lo menos posible</option>
-          <option value="sala">Encontrar una sala más tranquila</option>
-          <option value="noche">Ver una función de noche</option></select></label>
-      <button id="cBtn" class="btn w-full bg-emerald-500 hover:bg-emerald-400 text-black font-bold py-3 rounded-xl">Ver mi mejor opción</button>
+      <button id="cBtn" class="btn w-full bg-emerald-500 hover:bg-emerald-400 text-black font-bold py-3 rounded-xl">Calcular</button>
     </div>
     <div id="cOut" class="text-zinc-300 flex items-center justify-center text-center md:min-h-64" aria-live="polite">
-      <p>Completa tus datos y selecciona <strong>“Ver mi mejor opción”</strong> para comparar los cines.</p>
+      <p>Elige los datos y pulsa <strong>Calcular</strong>.</p>
     </div>
   </div>
 </section>
 
-<section id="cartelera" class="py-8 scroll-mt-24">
-  <p class="text-sm font-bold text-emerald-300">2 · Elige una película</p>
-  <h2 class="text-2xl md:text-3xl font-black mt-1">Películas y horarios</h2>
-  <p class="text-zinc-300 mt-2">¿Quieres saber qué películas llegan pronto?</p>
-  <details id="panelEstrenos" class="card mt-3 mb-5 overflow-hidden">
-    <summary class="cursor-pointer list-none flex items-center justify-between gap-3 p-4 font-bold text-emerald-300">
-      <span>Ver próximos estrenos</span>
-      <span class="text-sm text-zinc-400">Toca para desplegar</span>
-    </summary>
-    <div class="border-t border-zinc-800 p-4">
-      <p class="text-sm text-zinc-300 mb-4">Títulos anunciados para próximos estrenos en Colombia.com. Las fechas pueden cambiar y no confirman la programación de cada cine en Montería.</p>
-      <div class="grid sm:grid-cols-2 gap-3">
-        <article class="release-card rounded-xl bg-zinc-900 p-4">
-          <img class="release-poster" src="https://cdn.colombia.com/cine/2026/10/clayface-47962.jpg" alt="Póster de Clayface" width="160" height="240" loading="lazy" decoding="async">
-          <div><h3 class="font-bold text-amber-300">Clayface</h3>
-          <p class="text-sm text-zinc-400 mt-1">Terror y ciencia ficción. Fecha por confirmar.</p></div>
-        </article>
-        <article class="release-card rounded-xl bg-zinc-900 p-4">
-          <img class="release-poster" src="https://cdn.colombia.com/cine/2026/10/la-sinfonia-de-los-bichos-raros-47964.jpg" alt="Póster de La Sinfonía de los Bichos Raros" width="160" height="240" loading="lazy" decoding="async">
-          <div><h3 class="font-bold text-amber-300">La Sinfonía de los Bichos Raros</h3>
-          <p class="text-sm text-zinc-400 mt-1">Animación. Fecha por confirmar.</p></div>
-        </article>
-        <article class="release-card rounded-xl bg-zinc-900 p-4">
-          <img class="release-poster" src="https://cdn.colombia.com/cine/2026/10/el-despertar-47965.jpg" alt="Póster de El Despertar" width="160" height="240" loading="lazy" decoding="async">
-          <div><h3 class="font-bold text-amber-300">El Despertar</h3>
-          <p class="text-sm text-zinc-400 mt-1">Suspenso. Fecha por confirmar.</p></div>
-        </article>
-        <article class="release-card rounded-xl bg-zinc-900 p-4">
-          <img class="release-poster" src="https://cdn.colombia.com/cine/2026/10/entrega-al-limite-47929.jpg" alt="Póster de Entrega al Límite" width="160" height="240" loading="lazy" decoding="async">
-          <div><h3 class="font-bold text-amber-300">Entrega al Límite</h3>
-          <p class="text-sm text-zinc-400 mt-1">Acción. Fecha por confirmar.</p></div>
-        </article>
-      </div>
-      <p class="text-xs text-zinc-500 mt-4">Fuente de referencia: Colombia.com · Consulta la cartelera local para confirmar fechas y funciones.</p>
-    </div>
-  </details>
-  <div class="grid sm:grid-cols-2 gap-3 md:max-w-2xl mt-4 mb-3">
+<section id="peliculas" class="py-6 pb-16 scroll-mt-24">
+  <h2 class="text-2xl font-black">Películas y funciones</h2>
+  <div class="grid sm:grid-cols-2 gap-3 mt-4 mb-3">
     <label class="block text-sm text-zinc-300">Día
       <select id="filtroDia" class="mt-1 w-full bg-zinc-900 border border-zinc-700 rounded-lg px-3 py-3"></select></label>
     <label class="block text-sm text-zinc-300">Película
       <select id="filtroPelicula" class="mt-1 w-full bg-zinc-900 border border-zinc-700 rounded-lg px-3 py-3"></select></label>
   </div>
   <p id="estadoDatos" class="text-xs text-zinc-400 mb-4" aria-live="polite"></p>
-  <p class="text-sm text-zinc-400 mb-4">La publicidad y los avances antes de la película pueden durar aproximadamente <strong class="text-zinc-200">5 a 15 minutos</strong>. El tiempo real cambia según la función.</p>
-  <div class="grid gap-4" id="peliculas"></div>
-</section>
-
-<section id="precios" class="py-8 scroll-mt-24">
-  <p class="text-sm font-bold text-emerald-300">3 · Compara antes de ir</p>
-  <h2 class="text-2xl md:text-3xl font-black mt-1">Precios aproximados</h2>
-  <p class="text-zinc-300 mt-2 mb-5">Entrada general en 2D. Valores en pesos colombianos (COP).</p>
-  <div class="grid md:grid-cols-3 gap-4" id="tarifas"></div>
-</section>
-
-<section id="combos" class="py-8 scroll-mt-24">
-  <p class="text-sm font-bold text-emerald-300">4 · Mira las opciones de confitería</p>
-  <h2 class="text-2xl md:text-3xl font-black mt-1">Combos por cine</h2>
-  <p class="text-zinc-300 mt-2 mb-5">Revisa qué incluye cada combo y su precio de referencia.</p>
-  <div class="grid md:grid-cols-3 gap-4" id="listaCombos"></div>
-  <p class="text-xs text-zinc-400 mt-4">Precios de referencia del documento CineTime (octubre de 2026). Los combos de Cine Colombia y Royal Films son estimados; confirma precios, tamaños y disponibilidad en cada sede.</p>
-</section>
-
-<section id="aforo" class="py-8 pb-16 scroll-mt-24">
-  <p class="text-sm font-bold text-emerald-300">5 · Escoge cuándo ir</p>
-  <h2 class="text-2xl md:text-3xl font-black mt-1">¿Qué día suele estar más tranquilo?</h2>
-  <p class="text-zinc-300 mt-2 mb-5">Selecciona un día para ver la afluencia estimada.</p>
-  <div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-7 gap-2" id="dias"></div>
-  <div id="diaInfo" class="card mt-4 p-5 fade" aria-live="polite"></div>
-  <div class="mt-5 rounded-xl border border-amber-400/40 bg-amber-400/10 p-4">
-    <h3 class="font-bold text-amber-200">Consejo para ahorrar</h3>
-    <p class="text-sm text-zinc-200 mt-1">De lunes a jueves, antes de las 3:00 p. m., la entrada puede costar alrededor de $7.000 COP.</p>
-  </div>
+  <div class="grid gap-4" id="peliculasLista"></div>
 </section>
 </main>
 
 <footer class="text-center text-xs text-zinc-500 py-8 border-t border-zinc-800">
-  Cine Time · Montería. La información es aproximada y puede cambiar; confirma precios y horarios con cada cine.
+  Precios y horarios aproximados. Confirma con cada cine.
 </footer>
 
 <script src="script.js"></script>
