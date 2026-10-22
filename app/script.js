@@ -51,7 +51,7 @@ const AF=['baja','alta','alta','baja','media','alta','alta'].map(n=>({n}));
 const COL={baja:'text-emerald-300',media:'text-orange-300',alta:'text-red-300'};
 
 /* Hora estimada de salida de la película elegida, en la franja de hora que escogió el usuario */
-const FRANJA_RANGO={m:['00:00','14:59'],t:['15:00','19:59'],n:['20:00','23:59']};
+const FRANJA_RANGO={m:['00:00','14:59'],r:['15:00','16:59'],t:['17:00','19:59'],n:['20:00','23:59']};
 function horaSalidaPelicula(p,fr){
  const [ini,fin]=FRANJA_RANGO[fr];
  const filas=['cm','rf'].map(k=>{
@@ -65,15 +65,16 @@ function horaSalidaPelicula(p,fr){
   <p class="text-xs text-zinc-400 mt-2">Incluye ${p.dur?p.dur+' min de película':'la duración'} y 12 min de publicidad.</p></div>`;
 }
 
-/* Calculadora: la hora es el único dato de horario, el precio sale de ella */
+/* Calculadora: el precio sale del día y la hora. Royal va en taquilla ($13.000); la web suma $1.500 por boleta */
 $('#cDia').innerHTML=DIAS.map((d,i)=>`<option value="${i}">${d}</option>`).join('');
 function precio(k,dia,fr){
- if(dia<4&&fr==='m')return {p:7000,matine:true};
  const fin=dia>=4; let p;
- if(k==='cc')p=fr==='n'?16400:fr==='t'?18800:16000;
+ if(k==='cc')p=fr==='m'?8000:fr==='r'?16000:fr==='t'?18800:16400;
  if(k==='cm')p=fin?17400:17000;
- if(k==='rf')p=14000+1500;
- return {p,matine:false};}
+ if(k==='rf')p=13000;
+ /* Martes y miércoles: mitad de precio. No se acumula con la matiné: se aplica la matiné ya es la mitad */
+ if((dia===1||dia===2)&&!(k==='cc'&&fr==='m'))p=p/2;
+ return {p,matine:k==='cc'&&fr==='m'};}
 $('#cBtn').onclick=()=>{
  const personas=$('#cPers');
  if(!personas.reportValidity())return;
@@ -92,6 +93,7 @@ $('#cBtn').onclick=()=>{
   <p class="text-2xl font-black text-emerald-300">${CINES[barato.k]} · ${SEDE[barato.k]}</p>
   <p class="text-3xl font-black mt-2">${cop(barato.tot)}</p>
   <p class="text-sm text-zinc-300">${n} ${n===1?'persona':'personas'} · ${cop(barato.p)} c/u${barato.matine?' (matiné)':''}</p>
+  <div class="space-y-1 mt-4 text-sm">${[...r].sort((x,y)=>x.tot-y.tot).map(x=>`<div class="flex justify-between gap-3 border-t border-zinc-700 pt-2"><span>${CINES[x.k]}${x.matine?' <small class="text-zinc-400">(matiné)</small>':''}</span><span><b>${cop(x.tot)}</b> <small class="text-zinc-400">${cop(x.p)} c/u</small></span></div>`).join('')}</div>
   <p class="mt-3 text-sm ${COL[a.n]}">Afluencia ${DIAS[dia].toLowerCase()}: ${a.n}</p>
   <h3 class="font-bold mt-5 mb-2">Total con entrada y combos</h3>
   <div class="space-y-2 text-sm">${combos.map(x=>`<div class="flex justify-between gap-3 border-t border-zinc-700 pt-2">
@@ -103,7 +105,7 @@ $('#cBtn').onclick=()=>{
 
 /* Precios de referencia por cine */
 const tarifas=[
- {id:'cc',base:'~$15.000 – $17.000',rows:[['Franja pico (3:00–7:59 p. m.)','$18.800'],['Nocturna (desde 8:00 p. m.)','$16.400']]},
+ {id:'cc',base:'~$15.000 – $17.000',rows:[['Matiné (antes de 3:00 p. m.)','$8.000'],['Franja pico (5:00–7:59 p. m.)','$18.800'],['Nocturna (desde 8:00 p. m.)','$16.400']]},
  {id:'cm',base:'~$16.000 – $18.000',rows:[['Fin de semana o festivo (2D)','$17.400']]},
  {id:'rf',base:'~$13.000 – $15.000',rows:[['Entrada base más barata','$11.000 – $15.000'],['Recargo digital web','+$1.500 por boleta']],best:true}];
 $('#tarifas').innerHTML=tarifas.map(t=>`<div class="card p-5 ${t.best?'ring-1 ring-amber-400/60':''}">
