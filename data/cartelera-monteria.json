@@ -1,16 +1,16 @@
 {
   "ciudad": "Monteria",
-  "actualizado": "2026-11-06T12:44:22-05:00",
+  "actualizado": "2026-11-07T11:40:41-05:00",
   "fuentes": {
     "cinemark": {
       "ok": true,
-      "actualizado": "2026-11-06T12:44:22-05:00",
-      "funciones": 67
+      "actualizado": "2026-11-07T11:40:41-05:00",
+      "funciones": 64
     },
     "royal": {
       "ok": true,
-      "actualizado": "2026-11-06T12:44:22-05:00",
-      "funciones": 112
+      "actualizado": "2026-11-07T11:40:41-05:00",
+      "funciones": 101
     },
     "cine_colombia": {
       "ok": false,
@@ -33,6 +33,13 @@
     }
   ],
   "peliculas": [
+    {
+      "id": "cm-HO00029604",
+      "titulo": "BTS ARIRANG KAOHSIUNG",
+      "duracion_min": 180,
+      "clasificacion": "TBC",
+      "imagen": "https://assets.cinemark-core.com/5db771be04daec00076df3f5/vista/movies/6ae116b4b96ec32991300ff0/common/bts-arirang-kaohsiung-113432-1793630343289"
+    },
     {
       "id": "cm-HO00027251",
       "titulo": "Clayface",
@@ -147,270 +154,6 @@
     }
   ],
   "funciones": [
-    {
-      "cine": "cm-buenavista",
-      "pelicula": "cm-HO00027513",
-      "fecha": "2026-11-06",
-      "hora": "14:30",
-      "formato": "2D",
-      "idioma": "doblada",
-      "sala": "Sala 4",
-      "precio": 17000,
-      "precio_origen": "calculado"
-    },
-    {
-      "cine": "rf-nuestro-monteria",
-      "pelicula": "rf-4123",
-      "fecha": "2026-11-06",
-      "hora": "14:30",
-      "formato": "2D",
-      "idioma": "doblada",
-      "sala": "SALA 2 STD",
-      "precio": 13000,
-      "precio_origen": "calculado"
-    },
-    {
-      "cine": "cm-buenavista",
-      "pelicula": "cm-HO00027915",
-      "fecha": "2026-11-06",
-      "hora": "14:55",
-      "formato": "2D",
-      "idioma": "doblada",
-      "sala": "Sala 3",
-      "precio": 17000,
-      "precio_origen": "calculado"
-    },
-    {
-      "cine": "rf-nuestro-monteria",
-      "pelicula": "rf-4198",
-      "fecha": "2026-11-06",
-      "hora": "15:15",
-      "formato": "2D",
-      "idioma": "doblada",
-      "sala": "SALA 4 STD",
-      "precio": 13000,
-      "precio_origen": "calculado"
-    },
-    {
-      "cine": "cm-buenavista",
-      "pelicula": "cm-HO00029283",
-      "fecha": "2026-11-06",
-      "hora": "15:30",
-      "formato": "2D",
-      "idioma": "doblada",
-      "sala": "Sala 5",
-      "precio": 17000,
-      "precio_origen": "calculado"
-    },
-    {
-      "cine": "rf-nuestro-monteria",
-      "pelicula": "rf-4038",
-      "fecha": "2026-11-06",
-      "hora": "15:40",
-      "formato": "3D",
-      "idioma": "doblada",
-      "sala": "SALA 5 STD",
-      "precio": null,
-      "precio_origen": "sin_dato"
-    },
-    {
-      "cine": "rf-nuestro-monteria",
-      "pelicula": "rf-4175",
-      "fecha": "2026-11-06",
-      "hora": "16:10",
-      "formato": "2D",
-      "idioma": "doblada",
-      "sala": "SALA 1 STD",
-      "precio": 13000,
-      "precio_origen": "calculado"
-    },
-    {
-      "cine": "rf-nuestro-monteria",
-      "pelicula": "rf-4038",
-      "fecha": "2026-11-06",
-      "hora": "16:20",
-      "formato": "2D",
-      "idioma": "doblada",
-      "sala": "SALA 3 STD",
-      "precio": 13000,
-      "precio_origen": "calculado"
-    },
-    {
-      "cine": "cm-buenavista",
-      "pelicula": "cm-HO00027513",
-      "fecha": "2026-11-06",
-      "hora": "17:20",
-      "formato": "2D",
-      "idioma": "doblada",
-      "sala": "Sala 4",
-      "precio": 17000,
-      "precio_origen": "calculado"
-    },
-    {
-      "cine": "cm-buenavista",
-      "pelicula": "cm-HO00027915",
-      "fecha": "2026-11-06",
-      "hora": "17:40",
-      "formato": "2D",
-      "idioma": "doblada",
-      "sala": "Sala 3",
-      "precio": 17000,
-      "precio_origen": "calculado"
-    },
-    {
-      "cine": "rf-nuestro-monteria",
-      "pelicula": "rf-4123",
-      "fecha": "2026-11-06",
-      "hora": "17:50",
-      "formato": "2D",
-      "idioma": "doblada",
-      "sala": "SALA 2 STD",
-      "precio": 13000,
-      "precio_origen": "calculado"
-    },
-    {
-      "cine": "rf-nuestro-monteria",
-      "pelicula": "rf-4198",
-      "fecha": "2026-11-06",
-      "hora": "18:15",
-      "formato": "2D",
-      "idioma": "doblada",
-      "sala": "SALA 4 STD",
-      "precio": 13000,
-      "precio_origen": "calculado"
-    },
-    {
-      "cine": "rf-nuestro-monteria",
-      "pelicula": "rf-4038",
-      "fecha": "2026-11-06",
-      "hora": "18:20",
-      "formato": "2D",
-      "idioma": "doblada",
-      "sala": "SALA 5 STD",
-      "precio": 13000,
-      "precio_origen": "calculado"
-    },
-    {
-      "cine": "rf-nuestro-monteria",
-      "pelicula": "rf-4121",
-      "fecha": "2026-11-06",
-      "hora": "18:30",
-      "formato": "2D",
-      "idioma": "doblada",
-      "sala": "SALA 1 STD",
-      "precio": 13000,
-      "precio_origen": "calculado"
-    },
-    {
-      "cine": "cm-buenavista",
-      "pelicula": "cm-HO00027251",
-      "fecha": "2026-11-06",
-      "hora": "18:45",
-      "formato": "2D",
-      "idioma": "doblada",
-      "sala": "Sala 5",
-      "precio": 17000,
-      "precio_origen": "calculado"
-    },
-    {
-      "cine": "rf-nuestro-monteria",
-      "pelicula": "rf-4012",
-      "fecha": "2026-11-06",
-      "hora": "19:00",
-      "formato": "2D",
-      "idioma": "doblada",
-      "sala": "SALA 3 STD",
-      "precio": 13000,
-      "precio_origen": "calculado"
-    },
-    {
-      "cine": "cm-buenavista",
-      "pelicula": "cm-HO00027513",
-      "fecha": "2026-11-06",
-      "hora": "20:20",
-      "formato": "2D",
-      "idioma": "doblada",
-      "sala": "Sala 4",
-      "precio": 17000,
-      "precio_origen": "calculado"
-    },
-    {
-      "cine": "cm-buenavista",
-      "pelicula": "cm-HO00029089",
-      "fecha": "2026-11-06",
-      "hora": "20:45",
-      "formato": "2D",
-      "idioma": "doblada",
-      "sala": "Sala 3",
-      "precio": 17000,
-      "precio_origen": "calculado"
-    },
-    {
-      "cine": "rf-nuestro-monteria",
-      "pelicula": "rf-4121",
-      "fecha": "2026-11-06",
-      "hora": "20:50",
-      "formato": "2D",
-      "idioma": "doblada",
-      "sala": "SALA 1 STD",
-      "precio": 13000,
-      "precio_origen": "calculado"
-    },
-    {
-      "cine": "rf-nuestro-monteria",
-      "pelicula": "rf-4038",
-      "fecha": "2026-11-06",
-      "hora": "21:00",
-      "formato": "2D",
-      "idioma": "doblada",
-      "sala": "SALA 5 STD",
-      "precio": 13000,
-      "precio_origen": "calculado"
-    },
-    {
-      "cine": "rf-nuestro-monteria",
-      "pelicula": "rf-4123",
-      "fecha": "2026-11-06",
-      "hora": "21:10",
-      "formato": "2D",
-      "idioma": "doblada",
-      "sala": "SALA 2 STD",
-      "precio": 13000,
-      "precio_origen": "calculado"
-    },
-    {
-      "cine": "rf-nuestro-monteria",
-      "pelicula": "rf-4198",
-      "fecha": "2026-11-06",
-      "hora": "21:15",
-      "formato": "2D",
-      "idioma": "doblada",
-      "sala": "SALA 4 STD",
-      "precio": 13000,
-      "precio_origen": "calculado"
-    },
-    {
-      "cine": "rf-nuestro-monteria",
-      "pelicula": "rf-4012",
-      "fecha": "2026-11-06",
-      "hora": "21:40",
-      "formato": "2D",
-      "idioma": "doblada",
-      "sala": "SALA 3 STD",
-      "precio": 13000,
-      "precio_origen": "calculado"
-    },
-    {
-      "cine": "cm-buenavista",
-      "pelicula": "cm-HO00027251",
-      "fecha": "2026-11-06",
-      "hora": "21:45",
-      "formato": "2D",
-      "idioma": "doblada",
-      "sala": "Sala 5",
-      "precio": 17000,
-      "precio_origen": "calculado"
-    },
     {
       "cine": "rf-nuestro-monteria",
       "pelicula": "rf-4198",
@@ -2109,6 +1852,116 @@
       "cine": "rf-nuestro-monteria",
       "pelicula": "rf-4002",
       "fecha": "2026-11-20",
+      "hora": "21:30",
+      "formato": "2D",
+      "idioma": "doblada",
+      "sala": "SALA 5 STD",
+      "precio": 13000,
+      "precio_origen": "calculado"
+    },
+    {
+      "cine": "cm-buenavista",
+      "pelicula": "cm-HO00029316",
+      "fecha": "2026-11-21",
+      "hora": "11:00",
+      "formato": "XD DBOX",
+      "idioma": "doblada",
+      "sala": "Sala 1",
+      "precio": null,
+      "precio_origen": "sin_dato"
+    },
+    {
+      "cine": "rf-nuestro-monteria",
+      "pelicula": "rf-4002",
+      "fecha": "2026-11-21",
+      "hora": "12:00",
+      "formato": "2D",
+      "idioma": "doblada",
+      "sala": "SALA 5 STD",
+      "precio": 13000,
+      "precio_origen": "calculado"
+    },
+    {
+      "cine": "cm-buenavista",
+      "pelicula": "cm-HO00029604",
+      "fecha": "2026-11-21",
+      "hora": "14:00",
+      "formato": "2D",
+      "idioma": "original",
+      "sala": "Sala 5",
+      "precio": 17400,
+      "precio_origen": "calculado"
+    },
+    {
+      "cine": "cm-buenavista",
+      "pelicula": "cm-HO00029316",
+      "fecha": "2026-11-21",
+      "hora": "14:30",
+      "formato": "XD DBOX",
+      "idioma": "doblada",
+      "sala": "Sala 1",
+      "precio": null,
+      "precio_origen": "sin_dato"
+    },
+    {
+      "cine": "rf-nuestro-monteria",
+      "pelicula": "rf-4002",
+      "fecha": "2026-11-21",
+      "hora": "15:10",
+      "formato": "2D",
+      "idioma": "doblada",
+      "sala": "SALA 5 STD",
+      "precio": 13000,
+      "precio_origen": "calculado"
+    },
+    {
+      "cine": "cm-buenavista",
+      "pelicula": "cm-HO00029316",
+      "fecha": "2026-11-21",
+      "hora": "18:00",
+      "formato": "XD DBOX",
+      "idioma": "doblada",
+      "sala": "Sala 1",
+      "precio": null,
+      "precio_origen": "sin_dato"
+    },
+    {
+      "cine": "cm-buenavista",
+      "pelicula": "cm-HO00029604",
+      "fecha": "2026-11-21",
+      "hora": "18:15",
+      "formato": "2D",
+      "idioma": "original",
+      "sala": "Sala 5",
+      "precio": 17400,
+      "precio_origen": "calculado"
+    },
+    {
+      "cine": "rf-nuestro-monteria",
+      "pelicula": "rf-4002",
+      "fecha": "2026-11-21",
+      "hora": "18:20",
+      "formato": "2D",
+      "idioma": "doblada",
+      "sala": "SALA 5 STD",
+      "precio": 13000,
+      "precio_origen": "calculado"
+    },
+    {
+      "cine": "cm-buenavista",
+      "pelicula": "cm-HO00029316",
+      "fecha": "2026-11-21",
+      "hora": "21:30",
+      "formato": "XD DBOX",
+      "idioma": "doblada",
+      "sala": "Sala 1",
+      "precio": null,
+      "precio_origen": "sin_dato"
+    },
+    {
+      "cine": "rf-nuestro-monteria",
+      "pelicula": "rf-4002",
+      "fecha": "2026-11-21",
       "hora": "21:30",
       "formato": "2D",
       "idioma": "doblada",
