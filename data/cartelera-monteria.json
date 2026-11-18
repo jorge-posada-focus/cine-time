@@ -1,16 +1,16 @@
 {
   "ciudad": "Monteria",
-  "actualizado": "2026-11-17T14:28:24-05:00",
+  "actualizado": "2026-11-18T14:11:03-05:00",
   "fuentes": {
     "cinemark": {
       "ok": true,
-      "actualizado": "2026-11-17T14:28:24-05:00",
-      "funciones": 26
+      "actualizado": "2026-11-18T14:11:03-05:00",
+      "funciones": 14
     },
     "royal": {
       "ok": true,
-      "actualizado": "2026-11-17T14:28:24-05:00",
-      "funciones": 50
+      "actualizado": "2026-11-18T14:11:03-05:00",
+      "funciones": 31
     },
     "cine_colombia": {
       "ok": false,
@@ -76,13 +76,6 @@
       "imagen": null
     },
     {
-      "id": "rf-4198",
-      "titulo": "EL BOSQUE SALVAJE: WILDWOOD",
-      "duracion_min": 130,
-      "clasificacion": "Para mayores de 12 años",
-      "imagen": null
-    },
-    {
       "id": "cm-HO00027513",
       "titulo": "El Gato con Sombrero",
       "duracion_min": 105,
@@ -95,20 +88,6 @@
       "duracion_min": 114,
       "clasificacion": "Para mayores de 7 años",
       "imagen": null
-    },
-    {
-      "id": "rf-4206",
-      "titulo": "ENCANTO",
-      "duracion_min": 102,
-      "clasificacion": "Para todo público",
-      "imagen": null
-    },
-    {
-      "id": "cm-HO00029698",
-      "titulo": "FLYWHEEL",
-      "duracion_min": 120,
-      "clasificacion": "12-A",
-      "imagen": "https://assets.cinemark-core.com/5db771be04daec00076df3f5/vista/movies/6af20ffe22a99d1ca8999de1/common/flywheel-114056-1794332114023"
     },
     {
       "id": "cm-HO00029180",
@@ -128,14 +107,14 @@
       "id": "cm-HO00026530",
       "titulo": "Juegos del hambre: Amanecer",
       "duracion_min": 160,
-      "clasificacion": "TBC",
+      "clasificacion": "12-A",
       "imagen": "https://assets.cinemark-core.com/5db771be04daec00076df3f5/vista/movies/6ace6268a1f5b47c5a23125c/common/juegos-del-hambre-amanecer-113722-1791995530790"
     },
     {
       "id": "rf-4002",
       "titulo": "LOS JUEGOS DEL HAMBRE: AMANECER EN LA COSECHA",
       "duracion_min": 150,
-      "clasificacion": "Pendiente",
+      "clasificacion": "Para mayores de 12 años",
       "imagen": null
     },
     {
@@ -151,324 +130,9 @@
       "duracion_min": 130,
       "clasificacion": "7-A",
       "imagen": "https://assets.cinemark-core.com/5db771be04daec00076df3f5/vista/movies/6ae4ba5517e69207e5ea000f/common/yo-soy-rocky-114022-1793482545610"
-    },
-    {
-      "id": "rf-4188",
-      "titulo": "YO SOY ROCKY",
-      "duracion_min": 128,
-      "clasificacion": "Para mayores de 7 años",
-      "imagen": null
     }
   ],
   "funciones": [
-    {
-      "cine": "cm-buenavista",
-      "pelicula": "cm-HO00027513",
-      "fecha": "2026-11-17",
-      "hora": "14:40",
-      "formato": "2D",
-      "idioma": "doblada",
-      "sala": "Sala 3",
-      "precio": 8500,
-      "precio_origen": "calculado"
-    },
-    {
-      "cine": "rf-nuestro-monteria",
-      "pelicula": "rf-4038",
-      "fecha": "2026-11-17",
-      "hora": "14:40",
-      "formato": "2D",
-      "idioma": "doblada",
-      "sala": "SALA 3 STD",
-      "precio": 6500,
-      "precio_origen": "calculado"
-    },
-    {
-      "cine": "cm-buenavista",
-      "pelicula": "cm-HO00029180",
-      "fecha": "2026-11-17",
-      "hora": "14:55",
-      "formato": "DBOX",
-      "idioma": "doblada",
-      "sala": "Sala 2",
-      "precio": null,
-      "precio_origen": "sin_dato"
-    },
-    {
-      "cine": "cm-buenavista",
-      "pelicula": "cm-HO00029698",
-      "fecha": "2026-11-17",
-      "hora": "15:10",
-      "formato": "2D",
-      "idioma": "doblada",
-      "sala": "Sala 4",
-      "precio": 8500,
-      "precio_origen": "calculado"
-    },
-    {
-      "cine": "rf-nuestro-monteria",
-      "pelicula": "rf-4123",
-      "fecha": "2026-11-17",
-      "hora": "15:20",
-      "formato": "2D",
-      "idioma": "doblada",
-      "sala": "SALA 4 STD",
-      "precio": 6500,
-      "precio_origen": "calculado"
-    },
-    {
-      "cine": "rf-nuestro-monteria",
-      "pelicula": "rf-4102",
-      "fecha": "2026-11-17",
-      "hora": "15:30",
-      "formato": "2D",
-      "idioma": "doblada",
-      "sala": "SALA 1 STD",
-      "precio": 6500,
-      "precio_origen": "calculado"
-    },
-    {
-      "cine": "cm-buenavista",
-      "pelicula": "cm-HO00027513",
-      "fecha": "2026-11-17",
-      "hora": "15:40",
-      "formato": "2D",
-      "idioma": "doblada",
-      "sala": "Sala 5",
-      "precio": 8500,
-      "precio_origen": "calculado"
-    },
-    {
-      "cine": "rf-nuestro-monteria",
-      "pelicula": "rf-4198",
-      "fecha": "2026-11-17",
-      "hora": "15:40",
-      "formato": "2D",
-      "idioma": "doblada",
-      "sala": "SALA 5 STD",
-      "precio": 6500,
-      "precio_origen": "calculado"
-    },
-    {
-      "cine": "rf-nuestro-monteria",
-      "pelicula": "rf-4206",
-      "fecha": "2026-11-17",
-      "hora": "16:30",
-      "formato": "2D",
-      "idioma": "doblada",
-      "sala": "SALA 2 STD",
-      "precio": 6500,
-      "precio_origen": "calculado"
-    },
-    {
-      "cine": "cm-buenavista",
-      "pelicula": "cm-HO00027513",
-      "fecha": "2026-11-17",
-      "hora": "17:15",
-      "formato": "2D",
-      "idioma": "doblada",
-      "sala": "Sala 3",
-      "precio": 8500,
-      "precio_origen": "calculado"
-    },
-    {
-      "cine": "rf-nuestro-monteria",
-      "pelicula": "rf-4038",
-      "fecha": "2026-11-17",
-      "hora": "17:20",
-      "formato": "2D",
-      "idioma": "doblada",
-      "sala": "SALA 3 STD",
-      "precio": 6500,
-      "precio_origen": "calculado"
-    },
-    {
-      "cine": "cm-buenavista",
-      "pelicula": "cm-HO00029697",
-      "fecha": "2026-11-17",
-      "hora": "17:55",
-      "formato": "2D",
-      "idioma": "doblada",
-      "sala": "Sala 4",
-      "precio": 8500,
-      "precio_origen": "calculado"
-    },
-    {
-      "cine": "cm-buenavista",
-      "pelicula": "cm-HO00029180",
-      "fecha": "2026-11-17",
-      "hora": "18:10",
-      "formato": "DBOX",
-      "idioma": "doblada",
-      "sala": "Sala 2",
-      "precio": null,
-      "precio_origen": "sin_dato"
-    },
-    {
-      "cine": "rf-nuestro-monteria",
-      "pelicula": "rf-4209",
-      "fecha": "2026-11-17",
-      "hora": "18:10",
-      "formato": "2D",
-      "idioma": "doblada",
-      "sala": "SALA 1 STD",
-      "precio": 6500,
-      "precio_origen": "calculado"
-    },
-    {
-      "cine": "rf-nuestro-monteria",
-      "pelicula": "rf-4123",
-      "fecha": "2026-11-17",
-      "hora": "18:20",
-      "formato": "2D",
-      "idioma": "doblada",
-      "sala": "SALA 4 STD",
-      "precio": 6500,
-      "precio_origen": "calculado"
-    },
-    {
-      "cine": "rf-nuestro-monteria",
-      "pelicula": "rf-4188",
-      "fecha": "2026-11-17",
-      "hora": "18:30",
-      "formato": "2D",
-      "idioma": "doblada",
-      "sala": "SALA 5 STD",
-      "precio": 6500,
-      "precio_origen": "calculado"
-    },
-    {
-      "cine": "cm-buenavista",
-      "pelicula": "cm-HO00027986",
-      "fecha": "2026-11-17",
-      "hora": "18:35",
-      "formato": "2D",
-      "idioma": "doblada",
-      "sala": "Sala 5",
-      "precio": 8500,
-      "precio_origen": "calculado"
-    },
-    {
-      "cine": "rf-nuestro-monteria",
-      "pelicula": "rf-4102",
-      "fecha": "2026-11-17",
-      "hora": "19:00",
-      "formato": "2D",
-      "idioma": "doblada",
-      "sala": "SALA 2 STD",
-      "precio": 6500,
-      "precio_origen": "calculado"
-    },
-    {
-      "cine": "rf-nuestro-monteria",
-      "pelicula": "rf-4012",
-      "fecha": "2026-11-17",
-      "hora": "20:00",
-      "formato": "2D",
-      "idioma": "doblada",
-      "sala": "SALA 3 STD",
-      "precio": 6500,
-      "precio_origen": "calculado"
-    },
-    {
-      "cine": "cm-buenavista",
-      "pelicula": "cm-HO00027513",
-      "fecha": "2026-11-17",
-      "hora": "20:25",
-      "formato": "2D",
-      "idioma": "doblada",
-      "sala": "Sala 3",
-      "precio": 8500,
-      "precio_origen": "calculado"
-    },
-    {
-      "cine": "rf-nuestro-monteria",
-      "pelicula": "rf-4209",
-      "fecha": "2026-11-17",
-      "hora": "21:00",
-      "formato": "2D",
-      "idioma": "doblada",
-      "sala": "SALA 1 STD",
-      "precio": 6500,
-      "precio_origen": "calculado"
-    },
-    {
-      "cine": "cm-buenavista",
-      "pelicula": "cm-HO00029697",
-      "fecha": "2026-11-17",
-      "hora": "21:05",
-      "formato": "2D",
-      "idioma": "doblada",
-      "sala": "Sala 4",
-      "precio": 8500,
-      "precio_origen": "calculado"
-    },
-    {
-      "cine": "rf-nuestro-monteria",
-      "pelicula": "rf-4121",
-      "fecha": "2026-11-17",
-      "hora": "21:20",
-      "formato": "2D",
-      "idioma": "doblada",
-      "sala": "SALA 4 STD",
-      "precio": 6500,
-      "precio_origen": "calculado"
-    },
-    {
-      "cine": "cm-buenavista",
-      "pelicula": "cm-HO00029180",
-      "fecha": "2026-11-17",
-      "hora": "21:25",
-      "formato": "DBOX",
-      "idioma": "doblada",
-      "sala": "Sala 2",
-      "precio": null,
-      "precio_origen": "sin_dato"
-    },
-    {
-      "cine": "rf-nuestro-monteria",
-      "pelicula": "rf-4188",
-      "fecha": "2026-11-17",
-      "hora": "21:30",
-      "formato": "2D",
-      "idioma": "doblada",
-      "sala": "SALA 5 STD",
-      "precio": 6500,
-      "precio_origen": "calculado"
-    },
-    {
-      "cine": "rf-nuestro-monteria",
-      "pelicula": "rf-4102",
-      "fecha": "2026-11-17",
-      "hora": "21:40",
-      "formato": "2D",
-      "idioma": "doblada",
-      "sala": "SALA 2 STD",
-      "precio": 6500,
-      "precio_origen": "calculado"
-    },
-    {
-      "cine": "cm-buenavista",
-      "pelicula": "cm-HO00029199",
-      "fecha": "2026-11-17",
-      "hora": "21:45",
-      "formato": "2D",
-      "idioma": "doblada",
-      "sala": "Sala 5",
-      "precio": 8500,
-      "precio_origen": "calculado"
-    },
-    {
-      "cine": "rf-nuestro-monteria",
-      "pelicula": "rf-4002",
-      "fecha": "2026-11-18",
-      "hora": "14:00",
-      "formato": "2D",
-      "idioma": "doblada",
-      "sala": "SALA 1 STD",
-      "precio": 6500,
-      "precio_origen": "calculado"
-    },
     {
       "cine": "cm-buenavista",
       "pelicula": "cm-HO00027513",
@@ -726,10 +390,10 @@
       "cine": "rf-nuestro-monteria",
       "pelicula": "rf-4002",
       "fecha": "2026-11-19",
-      "hora": "15:10",
+      "hora": "14:00",
       "formato": "2D",
       "idioma": "doblada",
-      "sala": "SALA 5 STD",
+      "sala": "SALA 1 STD",
       "precio": 13000,
       "precio_origen": "calculado"
     },
@@ -737,10 +401,10 @@
       "cine": "rf-nuestro-monteria",
       "pelicula": "rf-4002",
       "fecha": "2026-11-19",
-      "hora": "18:20",
+      "hora": "17:00",
       "formato": "2D",
       "idioma": "doblada",
-      "sala": "SALA 5 STD",
+      "sala": "SALA 1 STD",
       "precio": 13000,
       "precio_origen": "calculado"
     },
@@ -748,43 +412,10 @@
       "cine": "rf-nuestro-monteria",
       "pelicula": "rf-4002",
       "fecha": "2026-11-19",
-      "hora": "21:30",
+      "hora": "20:10",
       "formato": "2D",
       "idioma": "doblada",
-      "sala": "SALA 5 STD",
-      "precio": 13000,
-      "precio_origen": "calculado"
-    },
-    {
-      "cine": "rf-nuestro-monteria",
-      "pelicula": "rf-4002",
-      "fecha": "2026-11-20",
-      "hora": "15:10",
-      "formato": "2D",
-      "idioma": "doblada",
-      "sala": "SALA 5 STD",
-      "precio": 13000,
-      "precio_origen": "calculado"
-    },
-    {
-      "cine": "rf-nuestro-monteria",
-      "pelicula": "rf-4002",
-      "fecha": "2026-11-20",
-      "hora": "18:20",
-      "formato": "2D",
-      "idioma": "doblada",
-      "sala": "SALA 5 STD",
-      "precio": 13000,
-      "precio_origen": "calculado"
-    },
-    {
-      "cine": "rf-nuestro-monteria",
-      "pelicula": "rf-4002",
-      "fecha": "2026-11-20",
-      "hora": "21:30",
-      "formato": "2D",
-      "idioma": "doblada",
-      "sala": "SALA 5 STD",
+      "sala": "SALA 1 STD",
       "precio": 13000,
       "precio_origen": "calculado"
     },
